@@ -1,0 +1,4 @@
+---
+elk_stack_version: "7.15.2"
+ansible_connection: ssh
+ansible_user: maxship

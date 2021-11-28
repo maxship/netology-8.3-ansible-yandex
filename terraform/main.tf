@@ -63,7 +63,6 @@ resource "yandex_compute_instance" "kib" {
 
   metadata = {
     user-data = "${file("./meta.txt")}"
-    #ssh-keys = "${file("~/.ssh/id_ed25519.pub")}"
   }  
 }
 
@@ -90,7 +89,6 @@ resource "yandex_compute_instance" "app" {
 
   metadata = {
     user-data = "${file("./meta.txt")}"
-    #ssh-keys = "${file("~/.ssh/id_ed25519.pub")}"
   }  
 }
 
