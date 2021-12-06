@@ -2,3 +2,6 @@
 elk_stack_version: "7.15.2"
 ansible_connection: ssh
 ansible_user: maxship
+kibana_version: "{{  elk_stack_version  }}"
+elasticsearch_version: "{{  elk_stack_version  }}"
+filebeat_version: "{{  elk_stack_version  }}"
