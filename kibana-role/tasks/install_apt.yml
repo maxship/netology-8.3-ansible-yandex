@@ -2,6 +2,6 @@
 - name: Install kibana-role
   become: true
   apt:
-    deb: "/tmp/elasticsearch-{{ elk_stack_version }}-amd64.deb"
+    deb: "/tmp/kibana-{{ kibana_version }}-amd64.deb"
     state: present
   notify: restart Kibana
