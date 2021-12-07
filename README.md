@@ -17,16 +17,22 @@ users:
 
 ---
 
-Создал 2 репозитория [kibana-role](https://github.com/maxship/kibana-role) и [filebeat-role](https://github.com/maxship/filebeat-role).
+Роли загружены в репозитории Github: [kibana-role](https://github.com/maxship/kibana-role) и [filebeat-role](https://github.com/maxship/filebeat-role).
 
 
-IP адреса управляемых хостов прописаны в файле `hosts.yml`.
+IP адреса управляемых хостов прописаны в файле `inventory/elk/hosts.yml`.
 
-Для каждого сервиса сделан отдельный play в файле `site.yml`, все `roles` помечены тегами `elastic`, `kibana`, `filebeats`, соответственно.
+Используемые роли, требующие предварительной загрузки, прописаны в `requirements.yml`. Пример команды для загрузки ролей в директорию `roles`:
 
-ПО устанавливается на управляемые хосты с помощью менеджеров пакетов `yim` или `apt`, в зависимости от установленной на них ОС. Поддерживаемые ОС перечислены в `<role>/vars/main.yml`. В зависимости от 
+```sh
+$ ansible-galaxy install -r requirements.yml -p roles
+```
 
-Минимально необходимые настройки для запуска сервисов находятся в файлах шаблонов `elasticsearch.yml.j2`, `kibana.yml.j2`, `filebeat.yml.j2`.
+Для каждого сервиса сделан отдельный play в файле `site.yml`, `roles` помечены тегами `elastic`, `kibana`, `filebeats`, соответственно.
+
+
+ПО устанавливается на управляемые хосты с помощью менеджеров пакетов `yim` или `apt`, в зависимости от установленной на них ОС. Поддерживаемые ОС перечислены в `<role>/vars/main.yml`. 
+
 
 
 
