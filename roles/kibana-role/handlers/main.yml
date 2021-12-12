@@ -5,4 +5,3 @@
     state: restarted
   when: ansible_virtualization_type != 'docker'
   tags: kibana
-

@@ -44,3 +44,4 @@ terraform/meta.txt
 
 # не включать скачаные ансиблом файлы
 /files/*
+**/files/*
