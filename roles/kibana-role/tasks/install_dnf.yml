@@ -1,4 +1,10 @@
 ---
+- name: Download GPG-KEY
+  become: true
+  command: 
+    cmd: "rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+  changed_when: false
+
 - name: Install Kibana
   become: true
   dnf:

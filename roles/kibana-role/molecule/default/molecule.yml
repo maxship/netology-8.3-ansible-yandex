@@ -3,16 +3,23 @@ dependency:
   name: galaxy
 driver:
   name: docker
+# lint: ansible-lint
 platforms:
   - name: centos7
     image: docker.io/pycontribs/centos:7
     pre_build_image: true
-  - name: centos8
-    image: docker.io/pycontribs/centos:8
-    pre_build_image: true
-  - name: ubuntu
-    image: docker.io/pycontribs/ubuntu:latest
-    pre_build_image: true
+    exposed_ports:
+      - 5601/tcp
+      - 5601/udp
+    published_ports:
+      - 0.0.0.0:5601:5601/tcp
+      - 0.0.0.0:5601:5601/udp
+  # - name: centos8
+  #   image: docker.io/pycontribs/centos:8
+  #   pre_build_image: true
+  # - name: ubuntu
+  #   image: docker.io/pycontribs/ubuntu:latest
+  #   pre_build_image: true
 provisioner:
   name: ansible
 verifier:

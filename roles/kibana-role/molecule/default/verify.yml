@@ -5,6 +5,10 @@
   hosts: all
   gather_facts: false
   tasks:
-  - name: Example assertion
+  # - name: Verify kibana http
+  #   assert:
+  #     uri:
+  #       url: http://localhost:5601/
+  - name: Standard
     assert:
       that: true
