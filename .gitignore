@@ -42,6 +42,7 @@ terraform.rc
 ./terraform/meta.txt
 terraform/meta.txt
 
-# не включать скачаные ансиблом файлы
-/files/*
-**/files/*
+# # не включать скачаные ансиблом файлы
+/files/*.rpm
+/files/*.deb
+# **/files/*
