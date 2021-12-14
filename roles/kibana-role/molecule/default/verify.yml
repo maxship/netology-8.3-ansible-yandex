@@ -8,7 +8,7 @@
   # - name: Verify kibana http
   #   assert:
   #     uri:
-  #       url: http://localhost:5601/
+  #       url: http://localhost:5602
   - name: Standard
     assert:
       that: true
