@@ -2,13 +2,13 @@
 # This is an example playbook to execute Ansible tests.
 
 - name: Verify
-  hosts: all
+  hosts: elasticsearch
   gather_facts: false
   tasks:
-  # - name: Verify kibana http
+  # - name: Verify http
   #   assert:
   #     uri:
-  #       url: http://localhost:5602
+  #       url: http://localhost:9200
   - name: Standard
     assert:
       that: true

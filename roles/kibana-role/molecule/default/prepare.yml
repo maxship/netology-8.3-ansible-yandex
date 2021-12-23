@@ -1,5 +1,0 @@
----
-- name: Start elasticsearch
-  hosts: all
-  roles:
-    - elasticsearch-role

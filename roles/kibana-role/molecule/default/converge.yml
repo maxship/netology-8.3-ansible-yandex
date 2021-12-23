@@ -1,6 +1,13 @@
 ---
-- name: Converge
-  hosts: all
+- name: Elastic role
+  hosts: elasticsearch
+  tasks:
+    - name: "Include elasticsearch-role"
+      include_role:
+        name: "elasticsearch-role"
+        
+- name: kibana role
+  hosts: kibana
   tasks:
     - name: "Include kibana-role"
       include_role:
