@@ -2,11 +2,13 @@
 dependency:
   name: galaxy
 driver:
-  name: docker
+  name: podman
 platforms:
-  - name: instance
+  - name: elastic
     image: docker.io/pycontribs/centos:7
     pre_build_image: true
+    command: /usr/sbin/init
+    privileged: true
 provisioner:
   name: ansible
 verifier:

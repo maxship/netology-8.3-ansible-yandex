@@ -1,5 +1,5 @@
 galaxy_info:
-  #role_name: elasticsearch_role
+  role_name: elasticsearch_role
   author: Alexey Metlyakov
   description: your role description
   company: netology

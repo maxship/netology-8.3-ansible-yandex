@@ -1,6 +1,5 @@
 molecule==3.4.0
 molecule_podman==0.3.0
-git
 podman
 selinux
 ansible-lint

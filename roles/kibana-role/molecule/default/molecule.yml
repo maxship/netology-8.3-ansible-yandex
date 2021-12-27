@@ -32,6 +32,7 @@ platforms:
       - kibana
     image: docker.io/pycontribs/ubuntu:latest
     pre_build_image: true
+
 provisioner:
   name: ansible
 verifier:

@@ -1,0 +1,21 @@
+---
+- name: Elastic
+  hosts: elasticsearch
+  tasks:
+    - name: "Include elasticsearch-role"
+      include_role:
+        name: "elasticsearch-role"
+
+- name: Kibana
+  hosts: kibana
+  tasks:
+    - name: "Include kibana-role"
+      include_role:
+        name: "kibana-role"
+
+- name: Filebeat
+  hosts: filebeat
+  tasks:
+    - name: "Include filebeat-role"
+      include_role:
+        name: "filebeat-role"
