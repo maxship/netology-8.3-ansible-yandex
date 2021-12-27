@@ -1,0 +1,13 @@
+---
+- name: Download GPG-KEY
+  become: true
+  command: 
+    cmd: "rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch"
+  changed_when: false
+
+- name: Install Filebeat
+  become: true
+  dnf:
+    name: "/tmp/filebeat-{{ filebeat_version }}-x86_64.rpm"
+    state: present
+  notify: restart Filebeat

@@ -1,0 +1,13 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+- name: Verify
+  hosts: filebeat
+  gather_facts: false
+  tasks:
+  - name: Wait for Filebeat log file created
+    wait_for:
+      path: /var/log/
+      state: present
+      timeout: 60
+      msg: "Filebeat log file wasn't created"
