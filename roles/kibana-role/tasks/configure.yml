@@ -1,4 +1,10 @@
 ---
+- name: Enable Kibana service
+  become: true
+  service:
+    name: kibana
+    state: started
+    enabled: yes
 - name: Configure Kibana
   become: true
   template:
